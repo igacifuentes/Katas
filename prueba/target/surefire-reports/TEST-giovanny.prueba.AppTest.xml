@@ -39,6 +39,7 @@
     <property name="user.name" value="giovanny"/>
     <property name="java.class.path" value="/home/giovanny/Eclipse/configuration/org.eclipse.osgi/bundles/815/1/.cp/jars/plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.7"/>
+    
     <property name="sun.arch.data.model" value="32"/>
     <property name="java.home" value="/usr/lib/jvm/java-7-oracle/jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
