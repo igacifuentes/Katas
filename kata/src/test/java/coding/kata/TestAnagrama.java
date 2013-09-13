@@ -1,92 +1,111 @@
 package coding.kata;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.*;
 import junit.framework.Assert;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
 
-public class TestAnagrama {
+/**
+* Unit test for simple App.
+*/
+public class TestAnagrama extends TestCase
+{
+    /**
+* Create the test case
+*
+* @param testName name of the test case
+*/
+	Anagrama an;
+	String palabra="roma";
+	
+    public TestAnagrama( String testName )
+    {
+        super( testName );
+        an=new Anagrama();
+    	an.llenarAnagramas(palabra);
+    }
+ 
+    /**
+* @return the suite of tests being tested
+*/
+    public static Test suite()
+    {
+        return new TestSuite( TestAnagrama.class );
+    }
 
-	Boolean existe=false;
-	static Anagrama an;
-	static String palabra="roma";
+    /**
+* Rigourous Test :-)
+*/
+  
+
+    public void testPalabraRamo()
+    {
+
+    String anagrama="ramo";
+	boolean existe=an.buscar_Palabra(anagrama);
 	
-	@BeforeClass
-	public static void setUpClass(){
-		// Arrange
-		an=new Anagrama();
-		an.llenarAnagramas(palabra);
-	}
-	@Test
-	public void probarPalabraRamo() {
-		// Act
-		
-		String anagrama="ramo";
-		existe=an.buscar_Palabra(anagrama);
-	
-		// Assert 
-		assertEquals("El anagrama deberia devolver verdadero",true,existe);
-		assertNotNull(existe);
-	}
-	
-	@Test
-	public void probarPalabraAmor(){
+    Assert.assertEquals("El anagrama deberia devolver verdadero",true,existe);
+       
+       
+    }
+
+    
+	public void testPalabraAmor(){
 		String anagrama="amor";
-		existe=an.buscar_Palabra(anagrama);
+		boolean existe=an.buscar_Palabra(anagrama);
 		
-		assertEquals("El anagrama deberia dovolver verdadero ",true,existe);
-		
-	}	
-	@Test
-	public void probarPalabraOmar(){
-		String anagrama="omar";
-		existe=an.buscar_Palabra(anagrama);
-		
-		assertEquals("El anagrama deberia dovolver verdadero ",true,existe);
-	}
-	
-	@Test
-	public void probarPalabraMora(){
-		String anagrama="mora";
-		existe=an.buscar_Palabra(anagrama);
-		
-		assertEquals("El anagrama deberia dovolver verdadero ",true,existe);
-	}
-	
-	@Test
-	public void probarPalabraArmo(){
-		String anagrama="armo";
-		existe=an.buscar_Palabra(anagrama);
-		
-		assertEquals("El anagrama deberia dovolver verdadero ",true,existe);
-	}
-	
-	@Test
-	public void probarPalabraMaro(){
-		String anagrama="armo";
-		existe=an.buscar_Palabra(anagrama);
-		
-		assertEquals("El anagrama deberia dovolver verdadero ",true,existe);
-	}
-	
-	@Test
-	public void probarPalabraMoor(){
-		String anagrama="moor";
-		existe=an.buscar_Palabra(anagrama);
-		
-		assertEquals("El anagrama deberia dovolver false ",false,existe);
-	}
-	
-	@Test
-	public void probarPalabraRomo(){
-		String anagrama="romo";
-		existe=an.buscar_Palabra(anagrama);
-		
-		assertEquals("El anagrama deberia dovolver false ",false,existe);
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",true,existe);
 	}
 	
 
-}
+	public void testPalabraOmar(){
+		String anagrama="omar";
+		boolean existe=an.buscar_Palabra(anagrama);
+		
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",true,existe);
+	}
+	
+
+	public void testPalabraMora(){
+		String anagrama="mora";
+		boolean existe=an.buscar_Palabra(anagrama);
+		
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",true,existe);
+	}
+	
+
+	public void testPalabraArmo(){
+		String anagrama="armo";
+		boolean existe=an.buscar_Palabra(anagrama);
+		
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",true,existe);
+	}
+	
+	
+	public void testPalabraMaro(){
+		String anagrama="armo";
+		boolean existe=an.buscar_Palabra(anagrama);
+		
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",true,existe);
+	}
+	
+	
+	public void testPalabraMoor(){
+		String anagrama="moor";
+		boolean existe=an.buscar_Palabra(anagrama);
+		
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",false,existe);
+	}
+	
+
+	public void testPalabraRomo(){
+		String anagrama="romo";
+		boolean existe=an.buscar_Palabra(anagrama);
+		
+	    Assert.assertEquals("El anagrama deberia devolver verdadero",false,existe);
+	}
+    
+
+ }
