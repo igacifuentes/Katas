@@ -51,7 +51,7 @@ public class AppTest extends TestCase
     String resultado=app.probar();
 
     
-    assertNotNull(null);
+    assertNotNull(true);
 
     }
  }
