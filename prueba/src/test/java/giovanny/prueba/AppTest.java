@@ -42,7 +42,7 @@ public class AppTest extends TestCase
        
     }
     
-
+/*
     public void testApp2()
     {
        
@@ -51,5 +51,5 @@ public class AppTest extends TestCase
     Assert.assertEquals("Le resultado deberia ser : Exito","Exito",resultado);
   
        
-    }
+    }*/
  }
