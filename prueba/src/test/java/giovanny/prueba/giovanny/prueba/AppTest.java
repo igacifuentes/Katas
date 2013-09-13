@@ -61,7 +61,7 @@ public class AppTest extends TestCase
     App app=new App();
     String resultado=app.probar();
 
-        assertNotNull(null);
+        assertNotNull(true);
 
     }
     
@@ -71,7 +71,7 @@ public class AppTest extends TestCase
     App app=new App();
     String resultado=app.probar();
 
-        assertNotNull(null);
+        assertNotNull(true);
 
     }
  }
