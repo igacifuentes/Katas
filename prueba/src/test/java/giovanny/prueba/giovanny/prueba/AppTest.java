@@ -54,4 +54,14 @@ public class AppTest extends TestCase
         assertNotNull(true);
 
     }
+    
+    public void testApp3()
+    {
+       
+    App app=new App();
+    String resultado=app.probar();
+
+        assertNotNull(true);
+
+    }
  }
